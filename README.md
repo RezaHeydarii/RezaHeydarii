@@ -1,5 +1,5 @@
 - 👋 Hi, I’m ReZa Heydari
-- 👀 I’m interested in Fornt-end Development especially Reactjs.
+- 👀 I’m a Front-end and Mobile Developer mostly using Reactjs & React Native
 - 📫 My linkedin account : https://www.linkedin.com/in/reza-heydarii/
 
 <!---
