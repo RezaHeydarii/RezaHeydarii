@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Reza Heydari
+- 👋 Hi, I’m ReZa Heydari
 - 👀 I’m interested in Fornt-end Development especially Reactjs.
 - 📫 My linkedin account : https://www.linkedin.com/in/reza-heydarii/
 
