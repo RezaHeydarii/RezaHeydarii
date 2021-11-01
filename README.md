@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Reza Heydari
-- 👀 I’m interested in Fornt-end Development specialy Reactjs.
+- 👀 I’m interested in Fornt-end Development especially Reactjs.
 - 📫 My linkedin account : https://www.linkedin.com/in/reza-heydarii/
 
 <!---
