@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Terminal-inspired design system */
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 120 100% 70%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 120 100% 70%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 120 100% 70%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 120 80% 60%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 120 30% 40%;
+
+    --accent: 120 100% 20%;
+    --accent-foreground: 120 100% 70%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 30% 20%;
+    --input: 120 30% 20%;
+    --ring: 120 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 120 100% 70%;
+    --sidebar-primary: 120 100% 50%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 120 100% 70%;
+    --sidebar-border: 120 30% 20%;
+    --sidebar-ring: 120 100% 50%;
+  }
+}
+
+@theme {
+  --color-card: hsl(0 0% 8%);
+  --color-card-foreground: hsl(120 100% 70%);
+  --color-background: hsl(0 0% 4%);
+  --color-foreground: hsl(120 100% 70%;);
+  --color-border: hsl(120 30% 20%);
+  --color-muted-foreground: hsl(120 30% 40%);
+  --color-muted: hsl(0 0% 12%);
+
+  --animate-typing: typing 3s steps(22) forwards;
+
+  @keyframes typing {
+    0% {
+      width: 0ch;
+    }
+    100% {
+      width: 22ch;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] font-mono;
+  }
+}
+
+/* Terminal effects */
+@layer utilities {
+  .terminal-glow {
+    text-shadow: 0 0 10px var(--primary);
+  }
+
+  .terminal-border {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary) / 0.3;
+  }
+
+  .typing-cursor::after {
+    content: "_";
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 3s steps(40, end);
+  }
 }
